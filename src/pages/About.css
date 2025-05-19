@@ -1,0 +1,204 @@
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5%;
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  background-color: #271133;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 6px 3px 12px 11px rgba(232, 227, 227, 0.6);
+  border-radius: 4px;
+  
+}
+
+.about-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-image {
+
+  width: 1200px;
+  height: 54vh;
+  margin: 20vh 20vh;
+ 
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text {
+  width: 40vh;
+  height: 100vh;
+  flex: 1 1 300px;
+  padding: 20px;
+  color: #f8f3f3;
+  display: flex;
+  margin-top: 17vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-text h1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  width: 70vh;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  font-size: 4.2rem;
+  line-height: 1.6;
+    width: 70vh;
+  margin: 20px 0;
+}
+
+.about-contact p {
+  font-size: 4rem;
+  line-height: 1.4;
+  margin: 6px 0;
+  color: #eae7e7;
+}
+
+.about-contact strong {
+  color: #6412de;
+}
+
+.about-contact a {
+  color: #edeced;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-button {
+  margin-top: 90px;
+  padding: 12px 24px;
+  font-size: 6rem;
+  background-color: #a52f1b;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.resume-button:hover {
+  background-color: #2500aa;
+  transform: translateY(-2px);
+}
+/* ===== Laptops (1024px and below) ===== */
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    height: auto;
+  }
+
+  .about-image {
+    width: 90%;
+    height: auto;
+    margin: 0;
+  }
+
+  .about-text {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 3.5rem;
+    width: 100%;
+  }
+
+  .about-text p,
+  .about-contact p {
+    font-size: 2.2rem;
+    width: 100%;
+  }
+
+  .resume-button {
+    font-size: 3rem;
+    margin-top: 40px;
+    align-self: center;
+  }
+}
+
+/* ===== Tablets (768px and below) ===== */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 350px;
+    height: 30vh;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-text {
+    width: 90%;
+    padding: 2px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .about-text p,
+  .about-contact p {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .resume-button {
+    font-size: 2rem;
+    margin-top: 20px;
+    align-self: center;
+  }
+}
+
+/* ===== Small Phones (480px and below) ===== */
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-text p,
+  .about-contact p {
+    font-size: 1.2rem;
+  }
+
+  .resume-button {
+    font-size: 1.5rem;
+  }
+}
+

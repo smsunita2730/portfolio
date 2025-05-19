@@ -1,0 +1,78 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1e1c1c;
+  padding: 1.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.navbar-logo {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-left: 2rem; /* Adjusted for better responsiveness */
+  color: #f7f7f7;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 2rem; /* Adjusted for better responsiveness */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ece6e6;
+  font-size: 4.8rem;
+}
+
+.navbar-links a.active {
+  color: #0077aa;
+  font-weight: bold;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 4.5rem; /* Optional: size to match rest of navbar */
+  color: #f7f7f7;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1e1c1c;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links a {
+    color: #f7f7f7;
+    font-size: 1rem; /* Slightly smaller for mobile */
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}

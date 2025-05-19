@@ -1,0 +1,167 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 60px 30px 30px;
+  background: linear-gradient(45deg, #902772, #b3b14a, #5b88e4, #00bfff, #8a2be2);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  box-shadow: 6px 5px 12px 11px black;
+  gap: 2vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 30% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-left {
+  flex: 1;
+  width: 200px;
+  margin-left: 22vh;
+  margin-top: 0vh;
+}
+
+.hero-left h2 {
+  font-size: 8rem;
+  color: #d71d33;
+}
+
+.hero-left h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.hero-left h3 {
+  font-size: 7rem;
+  margin-top: 20px;
+  color: #a30d44;
+}
+
+.highlight-dark {
+  color: hsl(333, 52%, 4%);
+}
+
+.highlight {
+  color: #b82e1f;
+}
+
+.typewriter {
+  color: #9c0404;
+  font-weight: bold;
+  font-size: 5.5rem;
+  margin-top: 23px;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 15px 30px;
+  background-color: #181516;
+  color: rgb(216, 212, 212);
+  font-weight: bold;
+  font-size: 5.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 3px 4px 12px white;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2600cc;
+  transform: scale(1.05);
+}
+
+.social {
+  display: flex;
+  gap: 5rem;
+  margin-top: 30px;
+  font-size: 5.5rem;
+}
+
+.social a {
+  background-color: #000;
+  color: #00e0ff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background-color: #3b00ff;
+  color: white;
+  transform: scale(1.2);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.hero-right img {
+  width: 1300px;
+  height: 1500px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 16px 39px black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    gap: 3vh;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-left {
+    margin: 5vh 0 0 0;
+  }
+
+  .hero-left h2 {
+    margin-top: 7rem;
+    font-size: 3rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .highlight,
+  .highlight-dark {
+    font-size: 3rem;
+  }
+
+  .hero-left h3,
+  .typewriter {
+    font-size: 2rem;
+    margin-bottom: 0%;
+  }
+
+  .btn-primary {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+  }
+
+  .social {
+    justify-content: center;
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  .hero-right img {
+    width: 350px;
+    height: 330px;
+    margin-bottom: 2.5rem;
+  }
+}

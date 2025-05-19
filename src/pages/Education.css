@@ -1,0 +1,141 @@
+.education-section {
+  background-color: #a5b4d4;
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 6px 5px 12px 11px black;
+  box-sizing: border-box;
+}
+
+.education-heading {
+  text-align: center;
+  margin: 5vh 0 2rem 0;
+  font-size: 5rem;
+}
+
+.black-text {
+  color: black;
+  font-size: 7rem;
+}
+
+.purple-text {
+  color: purple;
+  font-size: 7rem;
+}
+
+.education-subheading {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 7.8rem;
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 17px;
+  border: 3px solid #000;
+  box-shadow: 10px 9px 10px 9px black;
+  margin: 2.5rem auto;
+  width: 75%;
+  gap: 2rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.education-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.education-content {
+  flex: 2;
+  font-size: 4rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.highlight {
+  color: green;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+/* Tablet View */
+@media (max-width: 1200px) {
+  .education-heading {
+    font-size: 5rem;
+  }
+
+  .education-subheading {
+    font-size: 3rem;
+  }
+
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+   
+  }
+
+  .education-content {
+    font-size: 2rem;
+    text-align: center;
+    
+  }
+
+  .highlight {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+
+/* Your existing CSS code is untouched below this line */
+/* ... (same as your provided code) ... */
+
+/* Extra small screen (mobile devices with width < 480px) */
+@media (max-width: 480px) {
+  .education-section {
+    padding: 1rem;
+  }
+
+  .education-heading {
+    font-size: 3rem;
+    margin: 3vh 0 1rem 0;
+  }
+.purple-text {
+  font-size: 3rem;
+}
+  .education-subheading {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .education-card {
+    width: 80%;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    box-shadow: 6px 6px 6px black;
+  }
+
+  .education-image {
+    max-width: 100%;
+
+    margin-bottom: -2rem;
+  }
+
+  .education-content {
+    
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .highlight {
+    font-size: 1.5rem;
+  }
+}

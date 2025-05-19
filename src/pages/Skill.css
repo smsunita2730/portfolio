@@ -1,0 +1,196 @@
+/* Outer container for the entire skills section */
+.outer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 14, 24);
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 6px 5px 12px 11px black;
+  box-sizing: border-box;
+}
+
+/* Box styling */
+.box {
+  background-color: rgb(16, 16, 77);
+  padding: 2rem;
+  box-shadow: 1px 16px 30px white;
+  border-radius: 10px;
+  width: 80%;
+  height: 70vh;
+  
+}
+
+/* Header Styling */
+.content h1 {
+  text-align: center;
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  color: #43ac43;
+}
+
+/* Container for skill items */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  justify-items: center;
+  height: 60vh;
+}
+
+/* Each skill box */
+.skill-box {
+  background-color: black;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+height: 12vh;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 10px 6px 10px rgb(233, 220, 220);
+}
+
+/* Hover effect */
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.skill-box .icon {
+  font-size: 5.5rem;
+  color: #eff2f5;
+  margin-bottom: 1rem;
+}
+
+.skill-box .icon:nth-child(1) {
+  color: #00ff6e; /* C++ */
+}
+
+/* Skill name text */
+.skill-box .text {
+  font-size: 4.6rem;
+  color: #efe8e8;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+  }
+
+  .skill-box {
+    max-width: 120px;
+   
+  }
+
+  .skill-box .icon {
+    font-size: 3.5rem;
+  }
+
+  .skill-box .text {
+    font-size: 1.4rem;
+  }
+}
+
+/* Your existing CSS code is untouched below this line */
+/* ... (same as your provided code) ... */
+
+/* Extra Responsive Enhancements for all devices (no upper code change) */
+
+/* For medium-large laptops and smaller desktops */
+@media (max-width: 1200px) {
+  .skill-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+  }
+}
+
+/* For tablets */
+@media (max-width: 992px) {
+  .box {
+    width: 90%;
+    height: auto;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+  }
+
+  .skill-box {
+    width: 100%;
+    height: 12vh;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .box {
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .skill-box {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .skill-box .icon {
+    font-size: 2rem;
+  }
+
+  .skill-box .text {
+    font-size: 1.2rem;
+  }
+}
+
+/* For extra small devices */
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .skill-box {
+    width: 90%;
+    margin: auto;
+    height: 9vh;
+  }
+
+  .skill-box .icon {
+    font-size: 1.6rem;
+  }
+
+  .skill-box .text {
+    font-size: 1rem;
+  }
+}
+
