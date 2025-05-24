@@ -1,141 +1,198 @@
 .education-section {
-  background-color: #a5b4d4;
-  padding: 2rem;
+  background: linear-gradient(135deg, #dccde9, #6b90e0); /* softer gradient */
+  padding: 2.5rem 2rem;
   width: 100%;
   min-height: 100vh;
-  box-shadow: 6px 5px 12px 11px black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* softer shadow */
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .education-heading {
   text-align: center;
   margin: 5vh 0 2rem 0;
-  font-size: 5rem;
+  font-size: 7.5rem;
+
+  color: #2e3a59;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px #cfd8f9;
 }
 
 .black-text {
-  color: black;
-  font-size: 7rem;
+  color: #1f2937; /* deep slate */
+  font-size: 9rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
 }
 
 .purple-text {
-  color: purple;
-  font-size: 7rem;
+  color: #7b5cf6; /* vibrant purple */
+  font-size: 9rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
 }
 
 .education-subheading {
   text-align: center;
-  margin-bottom: 4rem;
-  font-size: 7.8rem;
+  margin-bottom: 3rem;
+  font-size: 6rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #4f46e5; /* Indigo-600 */
+  font-weight: 600;
 }
 
 .education-card {
   display: flex;
   align-items: center;
-  background-color: #fff;
-  border-radius: 17px;
-  border: 3px solid #000;
-  box-shadow: 10px 9px 10px 9px black;
-  margin: 2.5rem auto;
-  width: 75%;
-  gap: 2rem;
-  padding: 1.5rem;
+ border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  border: 6px solid #0e0c15;
+  box-shadow: 0 6px 18px rgba(123, 92, 246, 0.4);
+  margin: 2rem auto;
+  width: 66%;
+  gap: 1rem;
+  line-height: 1rem; padding: 2rem;
   overflow: hidden;
   flex-wrap: wrap;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(123, 92, 246, 0.7);
 }
 
 .education-image {
   flex: 1 1 300px;
-  max-width: 400px;
+  max-width: 600px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(123, 92, 246, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.education-image:hover {
+  transform: scale(1.05);
 }
 
 .education-content {
   flex: 2;
-  font-size: 4rem;
+  font-size: 3.8rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 1rem;
+  
   text-align: left;
+  color: #2e3a59;
+  line-height: 1;
+  font-weight: 500;
 }
 
+/* Highlight text */
 .highlight {
-  color: green;
-  font-weight: bold;
+  color: #d11515; /* bright green */
+  font-weight: 700;
   font-size: 4rem;
+  text-shadow: 0 0 5px #552d99;
 }
 
 /* Tablet View */
 @media (max-width: 1200px) {
   .education-heading {
-    font-size: 5rem;
+    font-size: 2rem;
   }
+ .black-text ,.purple-text{
+    font-size: 4.3rem;
 
+  }
+  
   .education-subheading {
-    font-size: 3rem;
+    font-size: 1.7rem;
   }
-
+.education-heading{
+  font-size: 3rem;
+}
   .education-card {
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
-   
+    padding: 1.5rem;
   }
 
   .education-content {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
-    
   }
 
   .highlight {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     text-align: center;
   }
 }
-
-/* Your existing CSS code is untouched below this line */
-/* ... (same as your provided code) ... */
-
-/* Extra small screen (mobile devices with width < 480px) */
-@media (max-width: 480px) {
-  .education-section {
-    padding: 1rem;
-  }
-
-  .education-heading {
-    font-size: 3rem;
-    margin: 3vh 0 1rem 0;
-  }
-.purple-text {
-  font-size: 3rem;
-}
+@media (max-width: 780px) {
   .education-subheading {
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
+.education-heading{
+  font-size: 3rem;
+}
+  .black-text,.purple-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra small screen (mobile devices with width < 480px) */
+@media (max-width: 480px) {
+  .education-subheading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+   .black-text,.purple-text {
+    font-size: 2.3rem;
+  }
+  .education-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .education-heading {
+    font-size: 2.5rem;
+    margin: 3vh 0 1rem 0;
+  }
+
+  .purple-text {
+    font-size: 2.5rem;
+  }
+
+  .education-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
   .education-card {
     width: 80%;
-    padding: 1rem;
+    height: fit-content;
+    padding: 1.2rem;
     margin: 1.5rem auto;
-    box-shadow: 6px 6px 6px black;
+    box-shadow: 0 4px 10px rgba(123, 92, 246, 0.3);
   }
 
   .education-image {
     max-width: 100%;
-
+    height: 50%;
     margin-bottom: -2rem;
   }
-
+.education-content p{
+  font-size: 1.2rem;
+}
   .education-content {
-    
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0.5rem;
     text-align: center;
   }
 
   .highlight {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }

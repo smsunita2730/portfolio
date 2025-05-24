@@ -34,7 +34,17 @@ const Projects = () => {
           
           
           </p> <a href="https://temperatureconverterrrrrr.netlify.app/" target="_blank">Live</a></li>
-      
+          <li>
+  <strong>CGPA Booster Calculator :</strong>
+  <p>
+    Created a tool to calculate updated CGPA using previous scores and new semester grades.  
+    Implemented dynamic input fields with React hooks for real-time calculation and user experience.  
+    Used React hooks (useState) to manage state and perform real-time CGPA calculation.
+  </p>
+  
+  <a href="https://cgpasboosterr.netlify.app/" target="_blank" rel="noopener noreferrer">Live</a>
+</li>
+
           <li><strong>CRUD Application :</strong>
           <p>
           A simple React-based CRUD app that allows users to add, edit, and delete project entries. It features a responsive design and interactive UI for managing project titles and descriptions. Ideal for managing and customizing project lists efficiently.s

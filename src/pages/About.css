@@ -1,17 +1,18 @@
 .about-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 5%;
-  width: 100%;
-  height: 100vh;
-  padding: 40px;
-  background-color: #271133;
+  justify-content: center;
+  align-items: center;
+  gap: 33rem;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #2e1c4e, #6d4fa2);
   font-family: 'Poppins', sans-serif;
-  box-shadow: 6px 3px 12px 11px rgba(232, 227, 227, 0.6);
-  border-radius: 4px;
-  
+  scroll-margin-top: 80px;
+  min-height: 100vh;
+  opacity: 0;
+ 
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
 }
 
 .about-section.fade-in {
@@ -19,186 +20,180 @@
   transform: translateY(0);
 }
 
-.about-image {
-
-  width: 1200px;
-  height: 54vh;
-  margin: 20vh 20vh;
- 
-}
-
 .about-image img {
-  width: 100%;
-  height: 100%;
+  width: 1520px;
+  height: 1720px;
   object-fit: cover;
-  display: block;
+  border-radius: 50%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+.s{
+  font-size: 7rem;
+}
+.about-image img:hover {
+  transform: scale(1.05);
 }
 
 .about-text {
-  width: 40vh;
-  height: 100vh;
-  flex: 1 1 300px;
-  padding: 20px;
-  color: #f8f3f3;
-  display: flex;
-  margin-top: 17vh;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+  max-width: 2600px;
+  height: 1700px;
+ background: linear-gradient(135deg, #2e1c4e, #6d4fa2);
+  backdrop-filter: blur(10px);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  color: #e0d4ff;
+  text-align: center;
 
+}
+ h2{
+  color: brown;
+  font-size: 2.6rem;
+}
 .about-text h1 {
-  font-size: 5.5rem;
-  font-weight: 700;
-  width: 70vh;
-  line-height: 1.4;
-  margin-bottom: 18px;
+  font-size: 5.8rem;
+  color: #e7e6e6;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
 .about-text p {
-  font-size: 4.2rem;
-  line-height: 1.6;
-    width: 70vh;
-  margin: 20px 0;
+  font-size: 4rem;
+  line-height: 1.7;
+  margin-bottom: rem;
+  color: #d8ccff;
 }
-
+.sanu{
+  font-size: 6rem;
+}
 .about-contact p {
   font-size: 4rem;
-  line-height: 1.4;
-  margin: 6px 0;
-  color: #eae7e7;
+  color: #cbb7ff;
+  margin-bottom: 0.6rem;
 }
 
 .about-contact strong {
-  color: #6412de;
+  color: #bd9fff;
 }
 
 .about-contact a {
-  color: #edeced;
+  color: #ebdbff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.about-contact a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .resume-button {
-  margin-top: 90px;
-  padding: 12px 24px;
-  font-size: 6rem;
-  background-color: #a52f1b;
-  color: #fff;
-  border-radius: 10px;
-  font-weight: 600;
+  margin-top: 20px;
+  padding: 14px 36px;
+  font-size: 5rem;
+  background: linear-gradient(135deg, #fdfcff, #5e30ff);
+  color: rgb(223, 19, 19);
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  align-self: flex-start;
+  display: inline-block;
 }
 
 .resume-button:hover {
-  background-color: #2500aa;
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #8f45ff, #c5aaff);
+  box-shadow: 0 20px 40px rgba(182, 148, 255, 0.85);
 }
-/* ===== Laptops (1024px and below) ===== */
-@media (max-width: 1024px) {
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-text{
+    height: fit-content;
+  }
   .about-section {
     flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    height: auto;
+    padding: 60px 20px;
   }
 
-  .about-image {
-    width: 90%;
-    height: auto;
-    margin: 0;
+  .about-image img {
+    width: 250px;
+    height: 250px;
   }
 
   .about-text {
-    width: 90%;
-    height: auto;
-    margin-top: 20px;
-    align-items: center;
+    padding: 30px 25px;
     text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-text p, .about-contact p {
+    font-size: 1.3rem;
+  }
+
+  .resume-button {
+    font-size: 1.5rem;
+    padding: 12px 28px;
+  }
+}
+@media (max-width: 1260px) {
+  .about-section {
+    gap: 6rem; /* Reduce gap between image and text */
+    padding: 60px 30px;
+  }
+
+  .about-image img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about-text {
+    max-width: 600px;
+    height: fit-content;
+    padding: 30px;
   }
 
   .about-text h1 {
     font-size: 3.5rem;
-    width: 100%;
   }
-
-  .about-text p,
-  .about-contact p {
-    font-size: 2.2rem;
-    width: 100%;
-  }
-
-  .resume-button {
-    font-size: 3rem;
-    margin-top: 40px;
-    align-self: center;
-  }
+.sanu{
+  font-size: 5rem;
 }
-
-/* ===== Tablets (768px and below) ===== */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    height: auto;
-  }
-
-  .about-image {
-    width: 100%;
-    max-width: 350px;
-    height: 30vh;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .about-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .about-text {
-    width: 90%;
-    padding: 2px;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-  }
-
-  .about-text h1 {
-    font-size: 2.5rem;
-    width: 100%;
-  }
-
   .about-text p,
   .about-contact p {
-    font-size: 1.5rem;
-    width: 100%;
-  }
-
-  .resume-button {
     font-size: 2rem;
-    margin-top: 20px;
-    align-self: center;
+  }
+
+  .resume-button {
+    font-size: 2.4rem;
+    padding: 12px 26px;
   }
 }
 
-/* ===== Small Phones (480px and below) ===== */
 @media (max-width: 480px) {
+ .about-text{
+  height: fit-content;
+ }
   .about-text h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
-  .about-text p,
-  .about-contact p {
-    font-size: 1.2rem;
+  .about-text p, .about-contact p {
+    font-size: 1.15rem;
   }
 
   .resume-button {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding: 10px 24px;
   }
+  .sanu{
+  font-size: 3rem;
 }
-
+}

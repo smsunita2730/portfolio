@@ -7,16 +7,16 @@
   background-color: rgb(16, 14, 24);
   width: 100%;
   min-height: 100vh;
-  box-shadow: 6px 5px 12px 11px black;
+   box-shadow: inset 0 0 60px #000000cc;
   box-sizing: border-box;
 }
 
 /* Box styling */
 .box {
-  background-color: rgb(16, 16, 77);
+  background: linear-gradient(145deg, #111145, #1e1e50);
   padding: 2rem;
-  box-shadow: 1px 16px 30px white;
-  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(66, 43, 149, 0.7);
+   border-radius: 20px;
   width: 80%;
   height: 70vh;
   
@@ -25,9 +25,11 @@
 /* Header Styling */
 .content h1 {
   text-align: center;
-  font-size: 7rem;
+  font-size: 8rem;
   margin-bottom: 3rem;
-  color: #43ac43;
+  color: #0d0c1c;
+    text-shadow: 0 0 15px #bdbebd, 0 0 30px #6ee775aa;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Container for skill items */
@@ -41,7 +43,7 @@
 
 /* Each skill box */
 .skill-box {
-  background-color: black;
+   background: linear-gradient(145deg, #161627, #252549);
   padding: 1rem;
   border-radius: 8px;
   display: flex;
@@ -49,6 +51,8 @@
   align-items: center;
   justify-content: center;
   width: 60%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
 height: 12vh;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,15 +61,17 @@ height: 12vh;
 
 /* Hover effect */
 .skill-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(110, 231, 117, 0.8);
+  background: linear-gradient(145deg, #2d2d65, #57a557);
 }
 
 /* Icon styling */
 .skill-box .icon {
   font-size: 5.5rem;
-  color: #eff2f5;
+  color: #c7d1ff;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .skill-box .icon:nth-child(1) {
@@ -193,4 +199,3 @@ height: 12vh;
     font-size: 1rem;
   }
 }
-
